@@ -2,43 +2,11 @@
 
 import { CENTER, PROJECTS, STARS } from "./data";
 
-interface Props {
-  selected: string | null;
-}
+// Cross-connections only between the 3 main project nodes
+const MAIN_PROJECT_IDS = ["corpus", "hod", "stone"];
 
-export default function ConnectionLines({ selected }: Props) {
-  // Hub-to-node connections
-  const hubLines = PROJECTS.map((p) => ({
-    id: `hub-${p.id}`,
-    x1: CENTER.x,
-    y1: CENTER.y,
-    x2: p.x,
-    y2: p.y,
-    opacity: selected === p.id ? 0.55 : 0.28,
-    width: 0.18,
-    dasharray: "1.6 1.1",
-    delay: 0,
-  }));
-
-  // Cross-connections between nodes (faint)
-  const crossLines = [
-    { a: PROJECTS[0], b: PROJECTS[1] },
-    { a: PROJECTS[0], b: PROJECTS[2] },
-    { a: PROJECTS[1], b: PROJECTS[2] },
-  ].map(({ a, b }, i) => ({
-    id: `cross-${i}`,
-    x1: a.x,
-    y1: a.y,
-    x2: b.x,
-    y2: b.y,
-    opacity:
-      selected === a.id || selected === b.id ? 0.2 : 0.09,
-    width: 0.1,
-    dasharray: "0.5 1.8",
-    delay: 0.6 + i * 0.2,
-  }));
-
-  const allLines = [...hubLines, ...crossLines];
+export default function ConnectionLines() {
+  const mainProjects = PROJECTS.filter((p) => MAIN_PROJECT_IDS.includes(p.id));
 
   return (
     <svg
@@ -53,6 +21,26 @@ export default function ConnectionLines({ selected }: Props) {
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
+      <defs>
+        <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="white" stopOpacity="0.04" />
+          <stop offset="100%" stopColor="white" stopOpacity="0" />
+        </radialGradient>
+
+        {/*
+          Hub mask: white everywhere EXCEPT an ellipse over the center text area.
+          Lines inside the ellipse become invisible, so they appear to start cleanly
+          at its edge rather than cutting through the text.
+          The ellipse is shifted down (cy=56) because the hub content is
+          bottom-heavy (name, tagline, experience, pills, links all below the dot).
+          rx/ry are intentionally generous to cover the hub at all viewport sizes.
+        */}
+        <mask id="hub-mask">
+          <rect width="100" height="100" fill="white" />
+          <ellipse cx={CENTER.x} cy="56" rx="15" ry="13" fill="black" />
+        </mask>
+      </defs>
+
       {/* Background stars */}
       {STARS.map((s, i) => (
         <circle
@@ -65,13 +53,7 @@ export default function ConnectionLines({ selected }: Props) {
         />
       ))}
 
-      {/* Radial glow from center */}
-      <defs>
-        <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="white" stopOpacity="0.04" />
-          <stop offset="100%" stopColor="white" stopOpacity="0" />
-        </radialGradient>
-      </defs>
+      {/* Radial glow — rendered outside the mask so it stays visible */}
       <ellipse
         cx={CENTER.x}
         cy={CENTER.y}
@@ -80,23 +62,37 @@ export default function ConnectionLines({ selected }: Props) {
         fill="url(#center-glow)"
       />
 
-      {/* Connection lines */}
-      {allLines.map((line) => (
-        <line
-          key={line.id}
-          x1={line.x1}
-          y1={line.y1}
-          x2={line.x2}
-          y2={line.y2}
-          stroke="white"
-          strokeWidth={line.width}
-          strokeDasharray={line.dasharray}
-          opacity={line.opacity}
-          style={{
-            transition: "opacity 0.4s ease",
-          }}
-        />
-      ))}
+      {/* All hub → node lines, masked to avoid center text */}
+      <g mask="url(#hub-mask)">
+        {PROJECTS.map((p) => (
+          <line
+            key={p.id}
+            x1={CENTER.x} y1={CENTER.y}
+            x2={p.x} y2={p.y}
+            stroke={p.colors.primary}
+            strokeWidth={0.15}
+            strokeDasharray="1.4 1.2"
+            opacity={0.2}
+          />
+        ))}
+
+        {/* Faint cross-connections between the 3 main project nodes */}
+        {[
+          [mainProjects[0], mainProjects[1]],
+          [mainProjects[1], mainProjects[2]],
+          [mainProjects[0], mainProjects[2]],
+        ].map(([a, b], i) => (
+          <line
+            key={i}
+            x1={a.x} y1={a.y}
+            x2={b.x} y2={b.y}
+            stroke="white"
+            strokeWidth={0.1}
+            strokeDasharray="0.5 1.8"
+            opacity={0.08}
+          />
+        ))}
+      </g>
     </svg>
   );
 }

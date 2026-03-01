@@ -6,7 +6,6 @@ export interface ProjectColors {
   border: string;
   glow: string;
   panelBg: string;
-  badge?: string;
 }
 
 export interface ProjectLink {
@@ -35,11 +34,12 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+  // ── Independent projects ──────────────────────────────────────────
   {
     id: "corpus",
     label: "Corpus",
-    x: 19,
-    y: 18,
+    x: 18,
+    y: 14,
     floatClass: "float-corpus",
     colors: {
       primary: "#c9a96e",
@@ -62,8 +62,8 @@ export const PROJECTS: Project[] = [
   {
     id: "hod",
     label: "House of Descent",
-    x: 16,
-    y: 74,
+    x: 12,
+    y: 73,
     floatClass: "float-hod",
     colors: {
       primary: "#9b8ec4",
@@ -86,8 +86,8 @@ export const PROJECTS: Project[] = [
   {
     id: "stone",
     label: "Soil & Stone",
-    x: 74,
-    y: 71,
+    x: 78,
+    y: 73,
     floatClass: "float-stone",
     colors: {
       primary: "#c4a05a",
@@ -105,6 +105,104 @@ export const PROJECTS: Project[] = [
       status: "Active",
       statusVariant: "active",
       links: [{ label: "View Work →", href: "#" }],
+    },
+  },
+
+  // ── Professional experience ───────────────────────────────────────
+  {
+    id: "te",
+    label: "TE Connectivity",
+    x: 73,
+    y: 13,
+    floatClass: "float-te",
+    colors: {
+      primary: "#7496b8",
+      secondary: "#b8cede",
+      border: "rgba(116, 150, 184, 0.4)",
+      glow: "rgba(116, 150, 184, 0.18)",
+      panelBg: "rgba(116, 150, 184, 0.06)",
+    },
+    panel: {
+      title: "TE Connectivity",
+      category: "Experience · Product Management",
+      description:
+        "Youngest PM managing a $25M aerospace portfolio. Led product strategy for high-reliability connector systems across defense and commercial aviation programs.",
+      role: "Product Manager",
+      status: "Alumna",
+      statusVariant: "ongoing",
+      links: [{ label: "teconnectivity.com →", href: "https://www.te.com" }],
+    },
+  },
+  {
+    id: "exponent",
+    label: "Exponent",
+    x: 88,
+    y: 43,
+    floatClass: "float-exp",
+    colors: {
+      primary: "#5ea89e",
+      secondary: "#a8d4d0",
+      border: "rgba(94, 168, 158, 0.4)",
+      glow: "rgba(94, 168, 158, 0.18)",
+      panelBg: "rgba(94, 168, 158, 0.06)",
+    },
+    panel: {
+      title: "Exponent",
+      category: "Experience · Learning Platform",
+      description:
+        "4th hire. Helped scale the product management learning platform from early-stage to 500K+ learners — shaping curriculum, community, and growth strategy.",
+      role: "Early Team",
+      status: "Alumna",
+      statusVariant: "ongoing",
+      links: [{ label: "tryexponent.com →", href: "https://www.tryexponent.com" }],
+    },
+  },
+  {
+    id: "shopify",
+    label: "Shopify Academy",
+    x: 50,
+    y: 88,
+    floatClass: "float-shopify",
+    colors: {
+      primary: "#7aaa7a",
+      secondary: "#b8d4b8",
+      border: "rgba(122, 170, 122, 0.4)",
+      glow: "rgba(122, 170, 122, 0.18)",
+      panelBg: "rgba(122, 170, 122, 0.06)",
+    },
+    panel: {
+      title: "Shopify Academy",
+      category: "Experience · Instructional Design",
+      description:
+        "Senior Instructional Designer building learning experiences for Shopify merchants and partners. Owned curriculum strategy across merchant and partner enablement programs.",
+      role: "Senior Instructional Designer",
+      status: "Alumna",
+      statusVariant: "ongoing",
+      links: [{ label: "shopify.com/learn →", href: "https://www.shopify.com/learn" }],
+    },
+  },
+  {
+    id: "coseer",
+    label: "Coseer",
+    x: 6,
+    y: 42,
+    floatClass: "float-coseer",
+    colors: {
+      primary: "#b0789a",
+      secondary: "#d4b0c8",
+      border: "rgba(176, 120, 154, 0.4)",
+      glow: "rgba(176, 120, 154, 0.18)",
+      panelBg: "rgba(176, 120, 154, 0.06)",
+    },
+    panel: {
+      title: "Coseer",
+      category: "Published Writing · AI & Knowledge Systems",
+      description:
+        "Published writing on AI, language, and enterprise knowledge systems. Contributed to thought leadership on how organizations make meaning at scale.",
+      role: "Contributing Writer",
+      status: "Published",
+      statusVariant: "ongoing",
+      links: [{ label: "Read Articles →", href: "#" }],
     },
   },
 ];

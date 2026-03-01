@@ -26,7 +26,7 @@ export default function CenterHub() {
         top: `${CENTER.y}%`,
         transform: "translate(-50%, -50%)",
         zIndex: 10,
-        width: 300,
+        width: 320,
         textAlign: "center",
       }}
     >
@@ -46,7 +46,7 @@ export default function CenterHub() {
       <h1
         style={{
           fontFamily: "var(--font-serif)",
-          fontSize: "1.75rem",
+          fontSize: "2rem",
           fontWeight: 500,
           color: "#e8e8e0",
           letterSpacing: "-0.01em",
@@ -60,7 +60,7 @@ export default function CenterHub() {
       <p
         style={{
           fontFamily: "var(--font-serif)",
-          fontSize: "0.8rem",
+          fontSize: "0.92rem",
           fontStyle: "italic",
           color: "#7a7a72",
           marginTop: 6,
@@ -87,7 +87,7 @@ export default function CenterHub() {
             key={i}
             style={{
               fontFamily: "var(--font-mono)",
-              fontSize: "0.58rem",
+              fontSize: "0.68rem",
               color: "#5a5a54",
               lineHeight: 1.9,
               letterSpacing: "0.02em",
@@ -113,7 +113,7 @@ export default function CenterHub() {
             key={skill}
             style={{
               fontFamily: "var(--font-mono)",
-              fontSize: "0.55rem",
+              fontSize: "0.65rem",
               letterSpacing: "0.06em",
               textTransform: "uppercase",
               color: "#6b6b63",
@@ -138,7 +138,7 @@ export default function CenterHub() {
             href={href}
             style={{
               fontFamily: "var(--font-mono)",
-              fontSize: "0.6rem",
+              fontSize: "0.7rem",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
               color: "#5a5a54",

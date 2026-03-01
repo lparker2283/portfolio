@@ -36,7 +36,7 @@ export default function SpatialLayout() {
         }}
       >
         {/* SVG connection lines (behind everything) */}
-        <ConnectionLines selected={selected} />
+        <ConnectionLines />
 
         {/* Center hub */}
         <CenterHub />

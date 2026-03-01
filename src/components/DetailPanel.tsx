@@ -47,7 +47,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
           top: 0,
           right: 0,
           height: "100%",
-          width: 380,
+          width: 400,
           background: `linear-gradient(160deg, ${colors.panelBg} 0%, rgba(13,13,15,0.97) 40%)`,
           borderLeft: `1px solid ${colors.border}`,
           zIndex: 50,
@@ -69,7 +69,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
             color: "#5a5a54",
             cursor: "pointer",
             fontFamily: "var(--font-mono)",
-            fontSize: "0.75rem",
+            fontSize: "0.8rem",
             letterSpacing: "0.05em",
             padding: "4px 8px",
             transition: "color 0.2s",
@@ -88,7 +88,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
         <p
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.58rem",
+            fontSize: "0.68rem",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             color: colors.primary,
@@ -103,7 +103,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
         <h2
           style={{
             fontFamily: "var(--font-serif)",
-            fontSize: "1.6rem",
+            fontSize: "1.85rem",
             fontWeight: 500,
             color: "#e8e8e0",
             lineHeight: 1.15,
@@ -126,7 +126,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
         <p
           style={{
             fontFamily: "var(--font-serif)",
-            fontSize: "0.95rem",
+            fontSize: "1.05rem",
             color: "#a0a098",
             lineHeight: 1.75,
             marginBottom: 28,
@@ -141,7 +141,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
             <span
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.58rem",
+                fontSize: "0.68rem",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 color: "#5a5a54",
@@ -152,7 +152,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
             <span
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.65rem",
+                fontSize: "0.75rem",
                 color: "#a0a098",
               }}
             >
@@ -164,7 +164,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
             <span
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.58rem",
+                fontSize: "0.68rem",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 color: "#5a5a54",
@@ -175,7 +175,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
             <span
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.6rem",
+                fontSize: "0.7rem",
                 letterSpacing: "0.06em",
                 color: statusColor,
                 border: `1px solid ${statusColor}`,
@@ -197,7 +197,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
               href={href}
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.65rem",
+                fontSize: "0.75rem",
                 letterSpacing: "0.06em",
                 color: colors.primary,
                 textDecoration: "none",

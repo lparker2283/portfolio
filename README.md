@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lindsey Parker — Portfolio
 
-## Getting Started
+A spatial, single-page portfolio site. Professional identity at the center, projects and experience radiating outward as navigable nodes on a dark constellation canvas.
 
-First, run the development server:
+**Live:** [lparker2283.vercel.app](https://lparker2283.vercel.app) *(update once deployed)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Concept
+
+Not a scroll. Not a grid. A map you explore — click any node to open its detail panel. Each project has its own color palette and atmosphere.
+
+```
+        ○ Corpus          ○ TE Connectivity
+         \                /
+          \              /
+   Coseer ----● Lindsey ----○ Exponent
+          /   Parker    \
+         /                \
+○ House of Descent    ○ Soil & Stone
+                ○ Shopify Academy
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| | |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Animation | Framer Motion |
+| Fonts | Playfair Display · IBM Plex Mono |
+| Deploy | Vercel (static) |
 
-## Learn More
+No database. No auth. Fully static — deploys in seconds.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install
+npm run dev
+```
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Updating content
+
+All copy, links, colors, and node positions live in one file:
+
+```
+src/components/data.ts
+```
+
+Each project entry has:
+- `x` / `y` — position as % of viewport (adjust to reposition nodes)
+- `colors` — primary, glow, border, panel background
+- `panel` — title, category, description, role, status, links
+
+No other files need to change for content updates.
+
+---
+
+## Deploying to Vercel
+
+1. Push to GitHub
+2. Import at [vercel.com/new](https://vercel.com/new) → select `portfolio`
+3. No environment variables needed
+4. Deploy — done
+
+Every push to `main` redeploys automatically.

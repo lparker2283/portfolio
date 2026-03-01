@@ -9,7 +9,7 @@ interface Props {
   onClick: () => void;
 }
 
-const NODE_SIZE = 56;
+const NODE_SIZE = 72;
 
 export default function ProjectNode({ project, isSelected, onClick }: Props) {
   const [hovered, setHovered] = useState(false);
@@ -45,7 +45,7 @@ export default function ProjectNode({ project, isSelected, onClick }: Props) {
           <div
             style={{
               position: "absolute",
-              inset: 10,
+              inset: 14,
               borderRadius: "50%",
               background: colors.glow,
               filter: "blur(10px)",
@@ -87,7 +87,7 @@ export default function ProjectNode({ project, isSelected, onClick }: Props) {
           <div
             style={{
               position: "absolute",
-              inset: 24,
+              inset: 30,
               borderRadius: "50%",
               background: colors.primary,
               opacity: active ? 1 : 0.7,
@@ -103,7 +103,7 @@ export default function ProjectNode({ project, isSelected, onClick }: Props) {
         <p
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.6rem",
+            fontSize: "0.7rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: active ? "#e8e8e0" : colors.primary,
