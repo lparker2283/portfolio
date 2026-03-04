@@ -137,6 +137,30 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
 
         {/* Metadata */}
         <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 32 }}>
+          {panel.date && (
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.68rem",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#5a5a54",
+                }}
+              >
+                Date
+              </span>
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.75rem",
+                  color: "#a0a098",
+                }}
+              >
+                {panel.date}
+              </span>
+            </div>
+          )}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <span
               style={{

@@ -16,6 +16,7 @@ export interface ProjectLink {
 export interface ProjectPanel {
   title: string;
   category: string;
+  date?: string;
   description: string;
   role: string;
   status: string;
@@ -50,13 +51,14 @@ export const PROJECTS: Project[] = [
     },
     panel: {
       title: "Corpus",
-      category: "Writing Practice",
+      category: "Personal Project · Discovery Artifacts",
+      date: "2025 – Present",
       description:
-        "A longform writing and thinking practice — essays on transformation, alchemy, and the structures underneath experience. A space for ideas that resist easy categorization.",
-      role: "Author",
-      status: "Ongoing",
-      statusVariant: "ongoing",
-      links: [{ label: "Read →", href: "#" }],
+        "An intellectual commons for the raw material of thinking. Voice memos, screenshots, half-formed sketches; the stuff that disappears before it becomes anything. An ongoing exploration of whether wild, unstructured discovery makes interesting shapes before the presentation layer comes in and cleans everything up.",
+      role: "Creator / Contributor",
+      status: "In process",
+      statusVariant: "dev",
+      links: [{ label: "Give Corpus a try →", href: "#" }],
     },
   },
   {
@@ -74,13 +76,14 @@ export const PROJECTS: Project[] = [
     },
     panel: {
       title: "House of Descent",
-      category: "AI Platform · Switchyard LLC",
+      category: "Personal Project · AI Shadow Work Tool",
+      date: "2025 – Present",
       description:
-        "An AI-powered shadow work platform combining Jungian psychology with tactical decision-making frameworks. Built to surface what's actually in the way.",
-      role: "Founder & Builder",
-      status: "In Development",
+        "A shadow work platform built at the intersection of Jungian psychology and AI. Designed for people ready to stop managing their inner life and start working it. Born out of a season of real disruption (becoming a mother, moving across the country, needing something more rigorous than a meditation app, etc). Built it because I couldn't find it.",
+      role: "Creator",
+      status: "In process",
       statusVariant: "dev",
-      links: [{ label: "Join Waitlist →", href: "#" }],
+      links: [{ label: "Descend →", href: "#" }],
     },
   },
   {
@@ -124,13 +127,14 @@ export const PROJECTS: Project[] = [
     },
     panel: {
       title: "TE Connectivity",
-      category: "Experience · Product Management",
+      category: "Product Management · Enterprise Complexity",
+      date: "2013 – 2017",
       description:
-        "Youngest PM managing a $25M aerospace portfolio. Led product strategy for high-reliability connector systems across defense and commercial aviation programs.",
-      role: "Product Manager",
-      status: "Alumna",
+        "Youngest PM in division history with a $25M aerospace portfolio at a Fortune 500. Managed product strategy across global supply chains in highly regulated industries. Built products for Tesla, Rolls Royce, GE, and others, and drove a materials reduction program leading to 15% cost reduction on a 50-year old product line.",
+      role: "Global Product Manager",
+      status: "Alumni",
       statusVariant: "ongoing",
-      links: [{ label: "teconnectivity.com →", href: "https://www.te.com" }],
+      links: [],
     },
   },
   {
@@ -148,13 +152,14 @@ export const PROJECTS: Project[] = [
     },
     panel: {
       title: "Exponent",
-      category: "Experience · Learning Platform",
+      category: "Startup · Learning Platform",
+      date: "2021 – 2023",
       description:
-        "4th hire. Helped scale the product management learning platform from early-stage to 500K+ learners — shaping curriculum, community, and growth strategy.",
-      role: "Early Team",
-      status: "Alumna",
+        "Joined as the 4th hire when Exponent was purely for aspiring product managers. Left when it had 500K+ learners and a curriculum infrastructure built to scale.",
+      role: "Curriculum Lead",
+      status: "Alumni",
       statusVariant: "ongoing",
-      links: [{ label: "tryexponent.com →", href: "https://www.tryexponent.com" }],
+      links: [{ label: "Try Exponent →", href: "https://www.tryexponent.com" }],
     },
   },
   {
@@ -172,13 +177,14 @@ export const PROJECTS: Project[] = [
     },
     panel: {
       title: "Shopify Academy",
-      category: "Experience · Instructional Design",
+      category: "Learning Platform · Instructional Design",
+      date: "2024 – 2026",
       description:
-        "Senior Instructional Designer building learning experiences for Shopify merchants and partners. Owned curriculum strategy across merchant and partner enablement programs.",
-      role: "Senior Instructional Designer",
-      status: "Alumna",
+        "Led developer education for Shopify's partner ecosystem including designing curriculum, building the analytics infrastructure to understand how learning actually landed, and closing the loop with learner voice to keep improving. First course drove $4M in B2B merchant revenue for 3 brands without any formal course GTM.",
+      role: "Sr. Instructional Designer",
+      status: "Alumni",
       statusVariant: "ongoing",
-      links: [{ label: "shopify.com/learn →", href: "https://www.shopify.com/learn" }],
+      links: [{ label: "Visit Shopify Academy →", href: "https://www.shopify.com/learn" }],
     },
   },
   {
@@ -196,13 +202,14 @@ export const PROJECTS: Project[] = [
     },
     panel: {
       title: "Coseer",
-      category: "Published Writing · AI & Knowledge Systems",
+      category: "Pre-ChatGPT AI · Thought Leadership",
+      date: "2017 – 2019",
       description:
-        "Published writing on AI, language, and enterprise knowledge systems. Contributed to thought leadership on how organizations make meaning at scale.",
-      role: "Contributing Writer",
-      status: "Published",
+        "Head of Thought Leadership at an enterprise AI company in 2018, when \"AI\" still made executives nervous. Helped position a cognitive computing platform before the category had a name. Got a feature in Thrive Global and Authority Magazine as a result.",
+      role: "Head of Thought Leadership",
+      status: "Alumni",
       statusVariant: "ongoing",
-      links: [{ label: "Read Articles →", href: "#" }],
+      links: [{ label: "Read my interview in Thrive Global →", href: "#" }],
     },
   },
 ];
