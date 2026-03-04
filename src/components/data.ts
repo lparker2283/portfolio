@@ -210,7 +210,6 @@ export const PROJECTS: Project[] = [
       status: "Alumni",
       statusVariant: "ongoing",
       links: [
-        { label: "Read my interview in Thrive Global →", href: "#" },
         { label: "Read my Authority Magazine feature →", href: "https://medium.com/authority-magazine/women-leading-the-ai-industry-the-conversation-is-so-narrowly-focused-on-the-technology-the-b08e9dbb1b83" },
       ],
     },
