@@ -66,7 +66,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
             right: 20,
             background: "none",
             border: "none",
-            color: "#5a5a54",
+            color: "#878780",
             cursor: "pointer",
             fontFamily: "var(--font-mono)",
             fontSize: "0.8rem",
@@ -75,10 +75,10 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
             transition: "color 0.2s",
           }}
           onMouseEnter={(e) =>
-            ((e.target as HTMLElement).style.color = "#a0a098")
+            ((e.target as HTMLElement).style.color = "#c4c4bc")
           }
           onMouseLeave={(e) =>
-            ((e.target as HTMLElement).style.color = "#5a5a54")
+            ((e.target as HTMLElement).style.color = "#878780")
           }
         >
           ✕
@@ -127,7 +127,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
           style={{
             fontFamily: "var(--font-serif)",
             fontSize: "1.05rem",
-            color: "#a0a098",
+            color: "#c4c4bc",
             lineHeight: 1.75,
             marginBottom: 28,
           }}
@@ -145,7 +145,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
                   fontSize: "0.68rem",
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: "#5a5a54",
+                  color: "#878780",
                 }}
               >
                 Date
@@ -154,7 +154,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
                 style={{
                   fontFamily: "var(--font-mono)",
                   fontSize: "0.75rem",
-                  color: "#a0a098",
+                  color: "#c4c4bc",
                 }}
               >
                 {panel.date}
@@ -168,7 +168,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
                 fontSize: "0.68rem",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: "#5a5a54",
+                color: "#878780",
               }}
             >
               Role
@@ -177,7 +177,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
               style={{
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.75rem",
-                color: "#a0a098",
+                color: "#c4c4bc",
               }}
             >
               {panel.role}
@@ -191,7 +191,7 @@ function Panel({ project, onClose }: { project: Project; onClose: () => void }) 
                 fontSize: "0.68rem",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: "#5a5a54",
+                color: "#878780",
               }}
             >
               Status

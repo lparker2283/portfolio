@@ -31,13 +31,13 @@ export default function ConnectionLines() {
           Hub mask: white everywhere EXCEPT an ellipse over the center text area.
           Lines inside the ellipse become invisible, so they appear to start cleanly
           at its edge rather than cutting through the text.
-          The ellipse is shifted down (cy=56) because the hub content is
-          bottom-heavy (name, tagline, experience, pills, links all below the dot).
-          rx/ry are intentionally generous to cover the hub at all viewport sizes.
+          The ellipse covers the full hub content area — shifted up (cy=49) and
+          taller (ry=22) so lines to Corpus and TE Connectivity don't cut through
+          the name/tagline/experience text above the SVG center point.
         */}
         <mask id="hub-mask">
           <rect width="100" height="100" fill="white" />
-          <ellipse cx={CENTER.x} cy="56" rx="15" ry="13" fill="black" />
+          <ellipse cx={CENTER.x} cy="49" rx="18" ry="22" fill="black" />
         </mask>
       </defs>
 

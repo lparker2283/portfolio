@@ -62,7 +62,7 @@ export default function CenterHub() {
           fontFamily: "var(--font-serif)",
           fontSize: "0.92rem",
           fontStyle: "italic",
-          color: "#7a7a72",
+          color: "#a8a8a0",
           marginTop: 6,
           lineHeight: 1.5,
         }}
@@ -88,7 +88,7 @@ export default function CenterHub() {
             style={{
               fontFamily: "var(--font-mono)",
               fontSize: "0.68rem",
-              color: "#5a5a54",
+              color: "#878780",
               lineHeight: 1.9,
               letterSpacing: "0.02em",
             }}
@@ -116,8 +116,8 @@ export default function CenterHub() {
               fontSize: "0.65rem",
               letterSpacing: "0.06em",
               textTransform: "uppercase",
-              color: "#6b6b63",
-              border: "1px solid rgba(255,255,255,0.1)",
+              color: "#9a9a92",
+              border: "1px solid rgba(255,255,255,0.18)",
               borderRadius: 2,
               padding: "3px 7px",
             }}
@@ -141,15 +141,15 @@ export default function CenterHub() {
               fontSize: "0.7rem",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
-              color: "#5a5a54",
+              color: "#878780",
               textDecoration: "none",
               transition: "color 0.2s",
             }}
             onMouseEnter={(e) =>
-              ((e.target as HTMLElement).style.color = "#a0a098")
+              ((e.target as HTMLElement).style.color = "#c4c4bc")
             }
             onMouseLeave={(e) =>
-              ((e.target as HTMLElement).style.color = "#5a5a54")
+              ((e.target as HTMLElement).style.color = "#878780")
             }
           >
             {label}
